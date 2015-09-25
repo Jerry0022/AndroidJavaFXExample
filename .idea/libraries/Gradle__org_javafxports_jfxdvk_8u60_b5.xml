@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: org.javafxports:jfxdvk:8u60-b5">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.javafxports/jfxdvk/8u60-b5/f4b9b3d9bd9c442b84b929b37411c1afbd17a4d9/jfxdvk-8u60-b5.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.javafxports/jfxdvk/8u60-b5/e140e10545b783f0ecd3a2031c00696280315290/jfxdvk-8u60-b5-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.javafxports/jfxdvk/8u60-b5/e140e10545b783f0ecd3a2031c00696280315290/jfxdvk-8u60-b5-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

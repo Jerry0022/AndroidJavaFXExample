@@ -1,0 +1,51 @@
+group 'de.treder.testproject'
+version '0.1-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'org.javafxports.jfxmobile' // JavaFX to Android
+apply plugin: 'idea' // IDE
+
+sourceCompatibility = 1.8
+mainClassName = 'de.treder.androidjfx.SimpleApp'
+
+jfxmobile.android.androidSdk = 'C:\\Program Files (x86)\\Android\\android-sdk' // Or specify ANDROID_HOME system environment variable
+jfxmobile.android.manifest = 'AndroidManifest.xml' // Custom manifest
+
+repositories {
+    mavenCentral()
+    jcenter()
+    maven { url "https://jitpack.io" }
+    maven { url "file:${System.env.GDRIVE}\\LanTool\\mvn-release" }
+}
+
+// Build desktop and android version
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'org.javafxports:jfxmobile-plugin:1.0.1'
+    }
+}
+
+dependencies {
+    // Needed to import Android specific classes
+    compile "org.javafxports:jfxdvk:8u60-b5"
+    compile files("C:/Program Files (x86)/Android/android-sdk/platforms/android-21/android.jar")
+    /*
+    compile("de.lantool:mixedfx-tools:1.0.0")
+    {
+        exclude group: "org.jfxtras"
+        exclude group: "de.dfki"
+        exclude group: "de.dfki.mary"
+        // TODO Problem with lambda in de.mixedfx.assets.LayoutManager
+    }
+    */
+}
+
+idea {
+    module {
+        downloadJavadoc = true // default is false
+        downloadSources = true
+    }
+}
